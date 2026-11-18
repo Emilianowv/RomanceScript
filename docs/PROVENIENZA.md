@@ -8,6 +8,6 @@ RomanceScript 7.0 limita el alcance a seis lenguas y adopta el reparto documenta
 
 La inclusión `es(basic)` utiliza los archivos de xkeyboard-config ya instalados en Linux. Algunos niveles AltGr se heredan de esa base; el [manifiesto](layout-manifest.json) registra el resultado compilado, no solo los símbolos declarados explícitamente.
 
-El archivo Windows se llama `RomanceScript.klc` y usa el identificador interno ROM. Su validación es estática. No se presenta como una versión Windows compilada o probada.
+El archivo Windows se llama `RomanceScript.klc` y usa el identificador interno ROM. A partir de 8.1.1 se compila y se prueba la instalación y la traducción de teclas en Windows Server 2022 x64.
 
 El archivo original no incluía una licencia de código abierto. Los derechos se mantienen en [COPYRIGHT](../COPYRIGHT). Los datos de Unicode CLDR conservan su licencia Unicode-3.0, incluida en [UNICODE-LICENSE.txt](UNICODE-LICENSE.txt).

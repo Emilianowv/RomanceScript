@@ -1,10 +1,10 @@
 {
   "project": "RomanceScript",
   "based_on": "EMI V5",
-  "version": "8.1.0",
+  "version": "8.1.1",
   "os_support": {
     "linux": "XKB y Compose; pruebas y límites en VERIFICA.md",
-    "windows": "Fuente MSKLC con validación estática; no compilada ni instalada en Windows"
+    "windows": "Instalador nativo x64. Instalación, traducción con Win32 y retirada comprobadas en Windows Server 2022."
   },
   "keys": [
     {

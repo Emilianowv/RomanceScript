@@ -3,7 +3,8 @@ on:
   workflow_call:
   workflow_dispatch:
   push:
-    branches: [test/windows-installer]
+    branches: [main]
+    paths: ['windows/**', 'VERSION', 'scripts/check_windows_klc.py', 'docs/layout-manifest.json', '.github/workflows/windows.yml']
 
 permissions:
   contents: read

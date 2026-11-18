@@ -6,10 +6,10 @@ La instalación está verificada en **Debian 13 con KDE Plasma 6**. Incluye el t
 
 ## Instalar con el paquete Debian
 
-Descarga [RomanceScript para Linux](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/romancescript_8.1.0_all.deb) y, desde la carpeta de descarga, ejecuta estos comandos.
+Descarga [RomanceScript para Linux](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb) y, desde la carpeta de descarga, ejecuta estos comandos.
 
 ```bash
-sudo apt install ./romancescript_8.1.0_all.deb
+sudo apt install ./romancescript_8.1.1_all.deb
 romancescript user-install
 romancescript kde-select
 romancescript doctor

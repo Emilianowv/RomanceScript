@@ -15,4 +15,4 @@ La [guía de teclas](TECLAS.md) muestra las secuencias. El manifiesto contiene 4
 
 El identificador XKB pasa a `rom` y el paquete Debian se llama `romancescript`. El comando es `romancescript`. Las rutas de estado (`/var/lib/romancescript` y `~/.local/state/romancescript`) y los marcadores de bloques (`ROMANCESCRIPT ROM`) usan el nuevo nombre.
 
-La cobertura de letras principales se mide con los datos guardados de Unicode CLDR y el motor real XKB/Compose. Los caracteres auxiliares y la puntuación se muestran aparte. La fuente Windows recibe el mismo reparto previsto, con los límites de su validación estática.
+La cobertura de letras principales se mide con los datos guardados de Unicode CLDR y el motor real XKB/Compose. Los caracteres auxiliares y la puntuación se muestran aparte. El diseño de Windows sigue el mismo reparto en las teclas principales. Las pruebas nativas y sus límites se describen en [Pruebas](VERIFICA.md).

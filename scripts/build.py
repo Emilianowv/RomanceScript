@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Build the Debian package and the Windows keyboard source ZIP."""
+"""Build the Debian package."""
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import tempfile
-import zipfile
 
 from audit import ROOT, audit, source_files
 
@@ -20,7 +19,6 @@ def main():
     out = ROOT/'dist'
     out.mkdir(exist_ok=True)
     files = list(source_files())
-    prefix = f'RomanceScript-{version}'
     with tempfile.TemporaryDirectory(prefix='romancescript-package-') as t:
         stage = Path(t)/'package'
         payload = stage/'usr/share/romancescript'
@@ -61,18 +59,6 @@ Description: RomanceScript keyboard layout for Romance languages (rom)
         env = dict(os.environ, SOURCE_DATE_EPOCH=str(epoch))
         subprocess.run(['dpkg-deb', '--root-owner-group', '--threads-max=1', '-Zxz', '--build',
                         str(stage), str(out/f'romancescript_{version}_all.deb')], check=True, env=env)
-    windows_zip = out/f'{prefix}-Windows.zip'
-    with zipfile.ZipFile(windows_zip, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        entries = {
-            'RomanceScript.klc': (ROOT/'windows/RomanceScript.klc').read_bytes(),
-            'README.md': (ROOT/'windows/README.md').read_bytes(),
-            'COPYRIGHT': (ROOT/'COPYRIGHT').read_bytes(),
-        }
-        for name, data in entries.items():
-            item = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
-            item.external_attr = 0o100644 << 16
-            item.compress_type = zipfile.ZIP_DEFLATED
-            z.writestr(item, data)
     print('Pacchetti verificati e creati in dist/.')
 
 

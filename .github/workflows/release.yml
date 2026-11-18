@@ -5,7 +5,10 @@ on:
 permissions:
   contents: write
 jobs:
+  windows:
+    uses: ./.github/workflows/windows.yml
   release:
+    needs: windows
     runs-on: ubuntu-latest
     container: debian:13
     steps:
@@ -17,9 +20,13 @@ jobs:
         run: |
           version=$(cat VERSION)
           test "$GITHUB_REF_NAME" = "v$version"
-          printf 'linux=dist/romancescript_%s_all.deb\nwindows=dist/RomanceScript-%s-Windows.zip\n' "$version" "$version" >> "$GITHUB_OUTPUT"
+          printf 'linux=dist/romancescript_%s_all.deb\nwindows=dist/RomanceScript-%s-Windows-x64.exe\n' "$version" "$version" >> "$GITHUB_OUTPUT"
       - run: make build
       - run: python3 scripts/test_deb.py --live
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-installer
+          path: dist
       - name: Publish release with Linux and Windows files
         uses: softprops/action-gh-release@v2
         with:

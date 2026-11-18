@@ -13,7 +13,7 @@ Las comprobaciones usan el motor real libxkbcommon y las tablas Compose de Linux
 - Instalación, repetición, actualización del bloque anterior, respaldo, recuperación, conflictos y retirada en directorios temporales.
 - Compilación X11 y comparación del mapa exportado por un KWin Wayland aislado y de un mapa cargado y releído en un servidor Xwayland independiente.
 - Instalación, reinstalación y retirada del paquete con dpkg en una raíz temporal. El workflow Debian añade un ciclo en un contenedor desechable.
-- Las posiciones y tablas principales del archivo Windows, mediante controles estáticos.
+- En Windows Server 2022 x64, los controles estáticos del KLC, la compilación, la instalación, la reinstalación, las teclas mediante la API Win32 y la desinstalación.
 
 ## Reproducir las pruebas
 
@@ -49,6 +49,6 @@ La compilación y el mapa correcto no garantizan la escritura en todas las aplic
 cos'è
 ```
 
-El archivo Windows no está compilado, instalado ni probado escribiendo en Windows. Sus controles estáticos no sustituyen ese trabajo.
+Las pruebas de Windows usan la API de traducción de teclas y comprueban los archivos y el registro instalados. La selección en la interfaz de Windows y la escritura en aplicaciones de escritorio quedan fuera de esa prueba.
 
 Los resultados remotos se consultan en [GitHub Actions](https://github.com/Emilianowv/RomanceScript/actions). El [informe de idiomas](LENGUAS.md) se regenera sin red mediante `python3 scripts/language_audit.py --write`.

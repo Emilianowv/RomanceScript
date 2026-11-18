@@ -1,5 +1,5 @@
 {
-  "layout_version": "8.1.0",
+  "layout_version": "8.1.1",
   "source": "release-49",
   "model": "direct or one dead key + printable key; concatenation for multi-character exemplars",
   "compose_locale": "en_US.UTF-8",

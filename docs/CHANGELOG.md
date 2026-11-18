@@ -1,5 +1,11 @@
 # Cambios
 
+## 8.1.1
+
+- Instalador Windows x64 listo para ejecutar.
+- El flujo de Windows compila, instala, prueba caracteres y desinstala antes de publicar.
+- Las descargas son el .deb de Linux y el .exe de Windows.
+
 ## 8.1.0 — 17 de noviembre de 2026
 
 - Grave seguido de Espacio escribe el apóstrofo recto. Grave dos veces escribe el acento grave literal.

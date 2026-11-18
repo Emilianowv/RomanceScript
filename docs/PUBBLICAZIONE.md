@@ -10,18 +10,16 @@ make build
 python3 scripts/test_deb.py
 ```
 
-El build genera en `dist/`:
+El flujo de publicación adjunta el paquete Debian y el instalador Windows x64. GitHub añade automáticamente sus enlaces a los archivos del código fuente.
 
-- `romancescript_8.1.0_all.deb`
-- `RomanceScript-8.1.0-Windows.zip`
-
-El flujo de publicación adjunta ambos paquetes. GitHub añade automáticamente sus enlaces a los archivos del código fuente.
+- Linux genera `dist/romancescript_8.1.1_all.deb` con `make build`.
+- Windows genera `dist/RomanceScript-8.1.1-Windows-x64.exe` con `windows/build-installer.ps1`.
 
 El workflow de verificación construye y prueba el paquete en un contenedor Debian 13. El workflow de etiquetas crea una **versión pública** después de comprobar que la etiqueta coincide con VERSION:
 
 ```bash
-git tag v8.1.0
-git push origin v8.1.0
+git tag v8.1.1
+git push origin v8.1.1
 ```
 
-Revisa los resultados, los archivos y las sumas antes de publicar una versión. Un resultado local no implica que el workflow remoto haya pasado. No se distribuye un instalador Windows compilado; el diseño `.klc` tiene comprobación estática.
+Revisa los resultados, los archivos y las sumas antes de publicar una versión. Un resultado local no implica que el workflow remoto haya pasado. El instalador Windows se publica si pasan las pruebas de compilación, instalación, teclas y retirada en el runner Windows x64.
