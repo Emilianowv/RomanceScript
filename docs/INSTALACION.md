@@ -4,17 +4,20 @@
 
 La instalación está verificada en **Debian 13 con KDE Plasma 6**. Incluye el teclado, las combinaciones de acentos y una copia de tu configuración anterior.
 
-## Instalación rápida (un comando)
+## Instalar con el paquete Debian
 
-En Debian 13 con KDE Plasma 6, abre una terminal y ejecuta:
+Descarga [RomanceScript para Linux](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/romancescript_8.1.0_all.deb) y, desde la carpeta de descarga, ejecuta estos comandos.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Emilianowv/RomanceScript/main/install.sh | sh
+sudo apt install ./romancescript_8.1.0_all.deb
+romancescript user-install
+romancescript kde-select
+romancescript doctor
 ```
 
-El script descarga el paquete de la versión 8.0.0, comprueba su SHA256, lo instala con sus dependencias y configura tus acentos y la selección KDE. El comando queda instalado en el sistema. Después guarda tu trabajo, cierra sesión y vuelve a entrar. Si prefieres revisarlo antes, descarga [`install.sh`](../install.sh), ábrelo y ejecútalo como `./install.sh`.
+Ejecuta los tres comandos `romancescript` desde cada cuenta KDE que utilice el teclado. Guarda el trabajo, cierra sesión y vuelve a entrar.
 
-También puedes [descargar el paquete `.deb`](#si-tienes-un-paquete-debian-deb) e instalarlo con un solo archivo.
+## Instalación desde el código fuente
 
 ## 1. Descarga y abre la carpeta
 
@@ -74,24 +77,6 @@ setxkbmap rom
 ```
 
 Antes de probar, anota el identificador de tu distribución habitual para poder volver a ella. Este comando no configura la selección persistente del escritorio ni funciona como selector de Wayland. En **Wayland** la selección depende del escritorio: estas instrucciones automatizan KDE. No se modifican la consola de texto ni la pantalla de inicio de sesión.
-
-## Si tienes un paquete Debian `.deb`
-
-El paquete se llama `romancescript`. Instala el teclado y el comando `romancescript` en el sistema.
-
-Descarga [romancescript_8.0.0_all.deb](https://github.com/Emilianowv/RomanceScript/releases/latest/download/romancescript_8.0.0_all.deb) y su [SHA256SUMS](https://github.com/Emilianowv/RomanceScript/releases/latest/download/SHA256SUMS). Desde la carpeta de descarga, verifica el archivo antes de instalar:
-
-```bash
-grep '  romancescript_8.0.0_all.deb$' SHA256SUMS | sha256sum -c -
-sudo apt install ./romancescript_8.0.0_all.deb
-romancescript user-install
-romancescript kde-select
-romancescript doctor
-```
-
-Continúa solo si la comprobación muestra **OK** para el paquete. Este método instala el comando `romancescript` en el sistema: ya no necesita el prefijo `./` ni conservar la carpeta del proyecto. Después, cierra sesión y vuelve a entrar.
-
-La página de Releases contiene también los archivos del código fuente y el ZIP de Windows.
 
 ## Actualizar
 

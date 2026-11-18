@@ -19,16 +19,16 @@ xkb_symbols "basic" {
     key <AE09> { [ 9, parenleft, bracketright, plusminus ] };
     key <AE10> { [ 0, parenright, braceright, degree ] };
     key <AE11> { [ minus, underscore, backslash, questiondown ] };
-    key <AE12> { [ equal, plus ] }; // Primi livelli US; livelli 3/4 ereditati.
+    key <AE12> { [ equal, plus, multiply, division ] };
 
     // Tasti di punteggiatura: posizioni statunitensi, senza alterare gli accenti.
     // Ç/ç si ottengono invece con accento grave + C/c via ~/.XCompose.
     key <BKSL> { [ backslash, bar ] }; // US: tasto che prima dava ç
     key <AB10> { [ slash, question, dead_belowdot, dead_abovedot ] };
     // Coma y punto y coma en su posición original.
-    key <AB08> { [ comma, semicolon, U2022, multiply ] };
+    key <AB08> { [ comma, semicolon, less, U2022 ] };
     // Punto y dos puntos en su posición original.
-    key <AB09> { [ period, colon, periodcentered, division ] };
+    key <AB09> { [ period, colon, greater, periodcentered ] };
 
     // Legature: A aveva già ae/AE in es(basic), ora dichiarate esplicitamente.
     // O: sostituisce oslash/Oslash di es(basic) con oe/OE.

@@ -1,7 +1,7 @@
 {
   "project": "RomanceScript",
   "based_on": "EMI V5",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "os_support": {
     "linux": "XKB y Compose; pruebas y límites en VERIFICA.md",
     "windows": "Fuente MSKLC con validación estática; no compilada ni instalada en Windows"
@@ -360,14 +360,14 @@
           "xkb_keysym": "plus"
         },
         {
-          "character": null,
-          "dead": true,
-          "xkb_keysym": "dead_cedilla"
+          "character": "×",
+          "dead": false,
+          "xkb_keysym": "multiply"
         },
         {
-          "character": null,
-          "dead": true,
-          "xkb_keysym": "dead_ogonek"
+          "character": "÷",
+          "dead": false,
+          "xkb_keysym": "division"
         }
       ]
     },
@@ -1256,14 +1256,14 @@
           "xkb_keysym": "semicolon"
         },
         {
+          "character": "<",
+          "dead": false,
+          "xkb_keysym": "less"
+        },
+        {
           "character": "•",
           "dead": false,
           "xkb_keysym": "U2022"
-        },
-        {
-          "character": "×",
-          "dead": false,
-          "xkb_keysym": "multiply"
         }
       ]
     },
@@ -1284,14 +1284,14 @@
           "xkb_keysym": "colon"
         },
         {
+          "character": ">",
+          "dead": false,
+          "xkb_keysym": "greater"
+        },
+        {
           "character": "·",
           "dead": false,
           "xkb_keysym": "periodcentered"
-        },
-        {
-          "character": "÷",
-          "dead": false,
-          "xkb_keysym": "division"
         }
       ]
     },

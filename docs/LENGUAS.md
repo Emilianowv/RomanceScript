@@ -1,6 +1,6 @@
 # Cobertura de RomanceScript
 
-RomanceScript 8.0.0 · datos Unicode CLDR release-49 · Compose en_US.UTF-8.
+RomanceScript 8.1.0 · datos Unicode CLDR release-49 · Compose en_US.UTF-8.
 
 El alcance prioritario es español, portugués, francés, italiano, rumano y catalán. Se conserva ß/ẞ como compatibilidad adicional.
 
@@ -65,7 +65,7 @@ Los repertorios principales, auxiliares y de puntuación se mantienen separados.
 | ü | Shift+tecla de agudo → U |
 | ÿ | Shift+tecla de agudo → Y |
 | Ÿ | Shift+tecla de agudo → Shift+Y |
-| · | AltGr+. |
+| · | Shift+AltGr+. |
 | ¿ | ¿ |
 | ¡ | Shift+¿ |
 
@@ -80,7 +80,7 @@ Estos huecos se muestran aparte: incluyen grafías extranjeras, históricas y ti
 | Italiano | Å Ø å ø | ‑ — … |
 | Portugués | Å Ø å ø Ā ā Ē ē Ī ī Ō ō Ū ū | ‐ ‑ – — † ‡ … ′ ″ |
 | Catalán | Å Ø å ø Ā ā Ē ē Ī ī Ō ō Ū ū | ‐ ‑ – — † ‡ … ′ ″ |
-| Rumano | Å å | ‐ ‑ – — … |
+| Rumano | Å å Ş ş Ţ ţ | ‐ ‑ – — … |
 
 ## Datos pendientes
 

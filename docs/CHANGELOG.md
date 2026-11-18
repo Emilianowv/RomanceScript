@@ -1,5 +1,12 @@
 # Cambios
 
+## 8.1.0 — 17 de noviembre de 2026
+
+- Grave seguido de Espacio escribe el apóstrofo recto. Grave dos veces escribe el acento grave literal.
+- AltGr+coma y AltGr+punto escriben < y >. Con Mayús adicional se obtiene • y ·.
+- AltGr+= y Mayús+AltGr+= escriben × y ÷.
+- Releases adjunta el paquete Debian y el ZIP con el diseño para Windows.
+
 ## 8.0.0 — 29 de octubre de 2026
 
 - El identificador XKB pasa de `wst` a `rom` y el paquete Debian pasa de `occidentale` a `romancescript`.

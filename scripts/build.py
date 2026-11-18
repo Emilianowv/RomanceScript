@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-"""Build deterministic source archives and a Debian all-architecture package."""
-import gzip
-import hashlib
-import io
+"""Build the Debian package and the Windows keyboard source ZIP."""
 import os
 from pathlib import Path
 import shutil
 import subprocess
-import tarfile
 import tempfile
 import zipfile
 
@@ -25,21 +21,6 @@ def main():
     out.mkdir(exist_ok=True)
     files = list(source_files())
     prefix = f'RomanceScript-{version}'
-    with zipfile.ZipFile(out/f'{prefix}.zip', 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for p in files:
-            item = zipfile.ZipInfo(f'{prefix}/{p.relative_to(ROOT).as_posix()}', (1980, 1, 1, 0, 0, 0))
-            item.external_attr = (0o100755 if p.stat().st_mode & 0o111 else 0o100644) << 16
-            item.compress_type = zipfile.ZIP_DEFLATED
-            z.writestr(item, p.read_bytes())
-    with (out/f'{prefix}.tar.gz').open('wb') as raw:
-        with gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=epoch, compresslevel=9) as gz:
-            with tarfile.open(fileobj=gz, mode='w', format=tarfile.PAX_FORMAT) as tar:
-                for p in files:
-                    data = p.read_bytes()
-                    info = tarfile.TarInfo(f'{prefix}/{p.relative_to(ROOT).as_posix()}')
-                    info.size, info.mtime = len(data), epoch
-                    info.mode = 0o755 if p.stat().st_mode & 0o111 else 0o644
-                    tar.addfile(info, io.BytesIO(data))
     with tempfile.TemporaryDirectory(prefix='romancescript-package-') as t:
         stage = Path(t)/'package'
         payload = stage/'usr/share/romancescript'
@@ -84,26 +65,14 @@ Description: RomanceScript keyboard layout for Romance languages (rom)
     with zipfile.ZipFile(windows_zip, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         entries = {
             'RomanceScript.klc': (ROOT/'windows/RomanceScript.klc').read_bytes(),
-            'install.ps1': (ROOT/'windows/install.ps1').read_bytes(),
-            'README.txt': (f'RomanceScript {version} - Windows\n\n'
-                'Contiene el archivo de diseno KLC y un asistente de descarga.\n'
-                'No contiene un setup.exe ni un teclado compilado.\n'
-                'Abrir RomanceScript.klc en Microsoft Keyboard Layout Creator, validar y compilar.\n'
-                'Esta version no se ha probado escribiendo en Windows.\n'
-                'Guia: https://github.com/Emilianowv/RomanceScript/tree/main/windows\n').encode(),
+            'README.md': (ROOT/'windows/README.md').read_bytes(),
+            'COPYRIGHT': (ROOT/'COPYRIGHT').read_bytes(),
         }
         for name, data in entries.items():
             item = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
             item.external_attr = 0o100644 << 16
             item.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(item, data)
-    standalone = []
-    for name in ('windows/RomanceScript.klc', 'windows/install.ps1', 'install.sh'):
-        target = out/Path(name).name
-        shutil.copyfile(ROOT/name, target)
-        standalone.append(target)
-    artifacts = [out/f'{prefix}.zip', out/f'{prefix}.tar.gz', out/f'romancescript_{version}_all.deb', windows_zip, *standalone]
-    (out/'SHA256SUMS').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n' for p in artifacts))
     print('Pacchetti verificati e creati in dist/.')
 
 

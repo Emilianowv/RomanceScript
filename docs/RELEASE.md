@@ -1,12 +1,10 @@
-# RomanceScript 8.0.0
+# RomanceScript 8.1.0
 
-El proyecto adopta el nombre RomanceScript y el identificador XKB `rom`. El paquete Debian pasa a llamarse `romancescript` y el comando es `romancescript`.
+- **[Linux (.deb)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/romancescript_8.1.0_all.deb)**
+- **[Windows (.zip con diseño KLC)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/RomanceScript-8.1.0-Windows.zip)**. Requiere Microsoft Keyboard Layout Creator para compilarlo.
 
-- La nueva versión utiliza `rom` y el paquete `romancescript`; la selección KDE sustituye wst. El paquete anterior puede conservarse durante la transición de las otras cuentas.
-- El teclado se instala en `/usr/share/X11/xkb/symbols/rom`; el estado y los respaldos usan `romancescript`.
-- Instalación en Linux con un comando: `curl -fsSL https://raw.githubusercontent.com/Emilianowv/RomanceScript/main/install.sh | sh`, o descargando el `.deb`.
-- Windows incluye `RomanceScript.klc` y un asistente `install.ps1`, ambos con validación estática; no hay un instalador compilado.
+Grave seguido de Espacio escribe `'` en palabras como `cos'è`. AltGr+coma y AltGr+punto escriben `<` y `>`. Añade Mayús para escribir `•` y `·`.
 
-La distribución de teclas no cambia respecto a 7.0: ñ/Ñ en su posición española, Mayús+coma → ;, Mayús+punto → :, ¿/¡ bajo Escape, breve y coma inferior en la antigua tecla +/*, ç/ß con grave, œ/æ con AltGr y los acentos muertos a la derecha de P y de Ñ.
+En la tecla de `= / +`, AltGr escribe `×` y Mayús+AltGr escribe `÷`.
 
-Descargas: paquete Linux `.deb`, código fuente ZIP/TAR.GZ, ZIP Windows con KLC y asistente de descarga, archivos KLC/PowerShell individuales e instalador Linux `install.sh`. Todas las descargas tienen su SHA256 en SHA256SUMS.
+Después de instalar el paquete Linux, ejecuta `romancescript user-install` en cada cuenta para actualizar el apóstrofo. Cierra sesión y vuelve a entrar.

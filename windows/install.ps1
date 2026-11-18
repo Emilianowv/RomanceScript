@@ -1,7 +1,7 @@
 # RomanceScript para Windows: asistente de descarga.
 # Validación estática; no se ha compilado ni probado en Windows.
 param(
-    [string]$Source = "https://github.com/Emilianowv/RomanceScript/releases/latest/download/RomanceScript.klc",
+    [string]$Source = "https://github.com/Emilianowv/RomanceScript/releases/download/v8.0.0/RomanceScript.klc",
     [string]$OutFile = "$env:USERPROFILE\Downloads\RomanceScript.klc"
 )
 

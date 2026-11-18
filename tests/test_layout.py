@@ -58,11 +58,15 @@ class LayoutTests(unittest.TestCase):
     def test_punctuation_and_braces_keep_altgr_levels(self):
         self.assertEqual(self.kb.name('AB09'), 'period')
         self.assertEqual(self.kb.name('AB09', shift=True), 'colon')
-        self.assertEqual(self.kb.name('AB09', altgr=True), 'periodcentered')
-        self.assertEqual(self.kb.name('AB09', shift=True, altgr=True), 'division')
+        self.assertEqual(self.kb.name('AB08', altgr=True), 'less')
+        self.assertEqual(self.kb.name('AB09', altgr=True), 'greater')
+        self.assertEqual(self.kb.name('AB08', shift=True, altgr=True), 'U2022')
+        self.assertEqual(self.kb.name('AB09', shift=True, altgr=True), 'periodcentered')
         self.assertEqual(self.kb.name('AD12', altgr=True), 'bracketright')
         self.assertEqual(self.kb.name('AD12', shift=True, altgr=True), 'braceright')
         self.assertEqual(self.kb.name('AE12', shift=True), 'plus')
+        self.assertEqual(self.kb.name('AE12', altgr=True), 'multiply')
+        self.assertEqual(self.kb.name('AE12', shift=True, altgr=True), 'division')
         self.assertEqual(self.kb.name('AE08', shift=True), 'asterisk')
 
     def test_romanian_breve_and_comma_below_both_cases(self):
@@ -94,10 +98,11 @@ class LayoutTests(unittest.TestCase):
                         self.assertEqual(self.kb.sequence([(dead, shift_dead), (key, shift)]), expected)
 
     def test_dead_keys_then_space(self):
-        for key, shift, expected in [('AD11', False, '`'), ('AD11', True, '~'), ('AE06', True, '^'),
+        for key, shift, expected in [('AD11', False, "'"), ('AD11', True, '~'), ('AE06', True, '^'),
                                      ('AC11', False, "'"), ('AC11', True, '"'), ('AD12', False, '˘')]:
             with self.subTest(key=key, shift=shift):
                 self.assertEqual(self.kb.sequence([(key, shift), ('SPCE',)]), expected)
+        self.assertEqual(self.kb.sequence([('AD11',), ('AD11',)]), '`')
 
     def test_portuguese_tilde_on_shift_grave(self):
         self.assertEqual(self.kb.name('AD11', shift=True), 'dead_tilde')

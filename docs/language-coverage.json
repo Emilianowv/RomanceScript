@@ -1,5 +1,5 @@
 {
-  "layout_version": "8.0.0",
+  "layout_version": "8.1.0",
   "source": "release-49",
   "model": "direct or one dead key + printable key; concatenation for multi-character exemplars",
   "compose_locale": "en_US.UTF-8",
@@ -10,14 +10,12 @@
     "dead_belowdot",
     "dead_breve",
     "dead_caron",
-    "dead_cedilla",
     "dead_circumflex",
     "dead_diaeresis",
     "dead_doubleacute",
     "dead_grave",
     "dead_hook",
     "dead_horn",
-    "dead_ogonek",
     "dead_tilde"
   ],
   "recipes": {
@@ -272,6 +270,18 @@
         "Shift+="
       ],
       "modifiers": 1
+    },
+    "×": {
+      "steps": [
+        "AltGr+="
+      ],
+      "modifiers": 1
+    },
+    "÷": {
+      "steps": [
+        "Shift+AltGr+="
+      ],
+      "modifiers": 2
     },
     "q": {
       "steps": [
@@ -761,7 +771,7 @@
     },
     ">": {
       "steps": [
-        "Shift+tecla ISO <"
+        "AltGr+."
       ],
       "modifiers": 1
     },
@@ -893,12 +903,6 @@
     },
     "•": {
       "steps": [
-        "AltGr+,"
-      ],
-      "modifiers": 1
-    },
-    "×": {
-      "steps": [
         "Shift+AltGr+,"
       ],
       "modifiers": 2
@@ -916,12 +920,6 @@
       "modifiers": 1
     },
     "·": {
-      "steps": [
-        "AltGr+."
-      ],
-      "modifiers": 1
-    },
-    "÷": {
       "steps": [
         "Shift+AltGr+."
       ],
@@ -1245,244 +1243,6 @@
       ],
       "modifiers": 1
     },
-    "ȩ": {
-      "steps": [
-        "AltGr+=",
-        "E"
-      ],
-      "modifiers": 1
-    },
-    "Ȩ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+E"
-      ],
-      "modifiers": 2
-    },
-    "ŗ": {
-      "steps": [
-        "AltGr+=",
-        "R"
-      ],
-      "modifiers": 1
-    },
-    "Ŗ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+R"
-      ],
-      "modifiers": 2
-    },
-    "ţ": {
-      "steps": [
-        "AltGr+=",
-        "T"
-      ],
-      "modifiers": 1
-    },
-    "Ţ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+T"
-      ],
-      "modifiers": 2
-    },
-    "ş": {
-      "steps": [
-        "AltGr+=",
-        "S"
-      ],
-      "modifiers": 1
-    },
-    "Ş": {
-      "steps": [
-        "AltGr+=",
-        "Shift+S"
-      ],
-      "modifiers": 2
-    },
-    "ḑ": {
-      "steps": [
-        "AltGr+=",
-        "D"
-      ],
-      "modifiers": 1
-    },
-    "Ḑ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+D"
-      ],
-      "modifiers": 2
-    },
-    "ģ": {
-      "steps": [
-        "AltGr+=",
-        "G"
-      ],
-      "modifiers": 1
-    },
-    "Ģ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+G"
-      ],
-      "modifiers": 2
-    },
-    "ḩ": {
-      "steps": [
-        "AltGr+=",
-        "H"
-      ],
-      "modifiers": 1
-    },
-    "Ḩ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+H"
-      ],
-      "modifiers": 2
-    },
-    "ķ": {
-      "steps": [
-        "AltGr+=",
-        "K"
-      ],
-      "modifiers": 1
-    },
-    "Ķ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+K"
-      ],
-      "modifiers": 2
-    },
-    "ļ": {
-      "steps": [
-        "AltGr+=",
-        "L"
-      ],
-      "modifiers": 1
-    },
-    "Ļ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+L"
-      ],
-      "modifiers": 2
-    },
-    "ç": {
-      "steps": [
-        "tecla de grave",
-        "C"
-      ],
-      "modifiers": 0
-    },
-    "Ç": {
-      "steps": [
-        "tecla de grave",
-        "Shift+C"
-      ],
-      "modifiers": 1
-    },
-    "ņ": {
-      "steps": [
-        "AltGr+=",
-        "N"
-      ],
-      "modifiers": 1
-    },
-    "Ņ": {
-      "steps": [
-        "AltGr+=",
-        "Shift+N"
-      ],
-      "modifiers": 2
-    },
-    "¸": {
-      "steps": [
-        "AltGr+=",
-        "Espacio"
-      ],
-      "modifiers": 1
-    },
-    "ę": {
-      "steps": [
-        "Shift+AltGr+=",
-        "E"
-      ],
-      "modifiers": 2
-    },
-    "Ę": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Shift+E"
-      ],
-      "modifiers": 3
-    },
-    "ų": {
-      "steps": [
-        "Shift+AltGr+=",
-        "U"
-      ],
-      "modifiers": 2
-    },
-    "Ų": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Shift+U"
-      ],
-      "modifiers": 3
-    },
-    "į": {
-      "steps": [
-        "Shift+AltGr+=",
-        "I"
-      ],
-      "modifiers": 2
-    },
-    "Į": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Shift+I"
-      ],
-      "modifiers": 3
-    },
-    "ǫ": {
-      "steps": [
-        "Shift+AltGr+=",
-        "O"
-      ],
-      "modifiers": 2
-    },
-    "Ǫ": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Shift+O"
-      ],
-      "modifiers": 3
-    },
-    "ą": {
-      "steps": [
-        "Shift+AltGr+=",
-        "A"
-      ],
-      "modifiers": 2
-    },
-    "Ą": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Shift+A"
-      ],
-      "modifiers": 3
-    },
-    "˛": {
-      "steps": [
-        "Shift+AltGr+=",
-        "Espacio"
-      ],
-      "modifiers": 2
-    },
     "Ὼ": {
       "steps": [
         "tecla de grave",
@@ -1602,6 +1362,20 @@
       ],
       "modifiers": 2
     },
+    "ç": {
+      "steps": [
+        "tecla de grave",
+        "C"
+      ],
+      "modifiers": 0
+    },
+    "Ç": {
+      "steps": [
+        "tecla de grave",
+        "Shift+C"
+      ],
+      "modifiers": 1
+    },
     "ǜ": {
       "steps": [
         "tecla de grave",
@@ -1630,7 +1404,7 @@
       ],
       "modifiers": 1
     },
-    "`": {
+    "'": {
       "steps": [
         "tecla de grave",
         "Espacio"
@@ -1738,7 +1512,7 @@
     "≳": {
       "steps": [
         "Shift+tecla de grave",
-        "Shift+tecla ISO <"
+        "AltGr+."
       ],
       "modifiers": 2
     },
@@ -2546,13 +2320,6 @@
         "Shift+M"
       ],
       "modifiers": 1
-    },
-    "'": {
-      "steps": [
-        "tecla de agudo",
-        "Espacio"
-      ],
-      "modifiers": 0
     },
     "ẅ": {
       "steps": [
@@ -3948,7 +3715,11 @@
       "missing": [],
       "auxiliary_missing": [
         "Å",
-        "å"
+        "å",
+        "Ş",
+        "ş",
+        "Ţ",
+        "ţ"
       ],
       "punctuation_missing": [
         "‐",

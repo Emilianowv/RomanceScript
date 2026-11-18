@@ -1,4 +1,4 @@
-# Pruebas de RomanceScript 7.0
+# Pruebas de RomanceScript
 
 Las comprobaciones usan el motor real libxkbcommon y las tablas Compose de Linux. El entorno de referencia es Debian 13 con KDE Plasma 6. Las pruebas no instalan el teclado en el escritorio abierto.
 
@@ -8,7 +8,7 @@ Las comprobaciones usan el motor real libxkbcommon y las tablas Compose de Linux
 - ñ/Ñ, ;/:, ¿/¡ y los niveles AltGr conservados.
 - Los acentos de vocales, las ligaduras œ/Œ y æ/Æ, ç/Ç y ß/ẞ.
 - Breve+a/A → ă/Ă y Mayús+esa tecla seguido de s/S o t/T → ș/Ș y ț/Ț.
-- Bloq Mayús, Control y los símbolos literales mediante acento seguido de Espacio.
+- Bloq Mayús, Control y las secuencias de Compose. Grave seguido de Espacio produce el apóstrofo recto y grave dos veces produce el grave literal.
 - Las letras principales de español, portugués, francés, italiano, rumano y catalán, incluidas las mayúsculas. La puntuación y los caracteres auxiliares se muestran aparte.
 - Instalación, repetición, actualización del bloque anterior, respaldo, recuperación, conflictos y retirada en directorios temporales.
 - Compilación X11 y comparación del mapa exportado por un KWin Wayland aislado y de un mapa cargado y releído en un servidor Xwayland independiente.
@@ -45,7 +45,8 @@ La compilación y el mapa correcto no garantizan la escritura en todas las aplic
 ñ Ñ ç Ç ß ẞ œ Œ æ Æ
 á é í ó ú À È Ì Ò Ù
 ã õ â ê î ô û ä ë ï ö ü ÿ
-ă Ă ș Ș ț Ț l·l ¿ ¡ ; :
+ă Ă ș Ș ț Ț l·l ¿ ¡ ; : < > × ÷
+cos'è
 ```
 
 El archivo Windows no está compilado, instalado ni probado escribiendo en Windows. Sus controles estáticos no sustituyen ese trabajo.

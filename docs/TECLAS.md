@@ -20,6 +20,8 @@ Pulsa el acento, suelta y pulsa la letra. Mantén Mayús al pulsar la letra para
 | Secuencia | Resultado |
 |---|---|
 | Agudo + vocal | á é í ó ú / Á É Í Ó Ú |
+| Grave + Espacio | `'`, como en `cos'è` |
+| Grave dos veces | Acento grave literal &#96; |
 | Grave + vocal | à è ì ò ù / À È Ì Ò Ù |
 | Diéresis + vocal o y | ä ë ï ö ü ÿ / Ä Ë Ï Ö Ü Ÿ |
 | Circunflejo + vocal | â ê î ô û / Â Ê Î Ô Û |
@@ -38,10 +40,12 @@ El acento agudo ya no activa ș/ț. La coma inferior de estas letras se distingu
 | AltGr+A, sin/con Mayús | æ / Æ |
 | AltGr+S, sin/con Mayús | ß / ẞ |
 | AltGr+E | € |
-| AltGr+punto | ·, para l·l |
+| AltGr+coma / AltGr+punto | `<` / `>` |
+| Mayús+AltGr+coma / Mayús+AltGr+punto | • / ·, para l·l |
+| AltGr+= / Mayús+AltGr+= | × / ÷ |
 | Mayús+8 | * |
 | Mayús+= | + |
 
-Para escribir el grave o la tilde literales, pulsa su acento muerto y después Espacio. Los corchetes y las llaves siguen en AltGr y Mayús+AltGr de las dos teclas a la derecha de P.
+Para escribir la tilde literal, pulsa su acento muerto y después Espacio. Los corchetes y las llaves siguen en AltGr y Mayús+AltGr de las dos teclas a la derecha de P.
 
 El [mapa completo](layout-manifest.json) contiene los cuatro niveles. El [informe de idiomas](LENGUAS.md) separa letras principales, caracteres auxiliares y puntuación.

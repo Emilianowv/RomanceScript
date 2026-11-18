@@ -1,4 +1,6 @@
 # BEGIN ROMANCESCRIPT ROM
+<dead_grave> <space> : "'" apostrophe
+<dead_grave> <dead_grave> : "`" grave
 <dead_grave> <c> : "ç" ccedilla
 <dead_grave> <C> : "Ç" Ccedilla
 <dead_grave> <s> : "ß" ssharp

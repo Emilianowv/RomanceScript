@@ -21,11 +21,12 @@ def check(xkb, normal, shift, altgr, altgr_shift):
     tokens=line.split('//')[0].split()
     assert tokens[3] == normal and tokens[4] == shift and tokens[6] == altgr and tokens[7] == altgr_shift, (xkb,tokens)
 check('TLDE', '00bf','00a1','005c','005c')
-check('AB09', '002e','003a','00b7','00f7')
+check('AB09', '002e','003a','003e','00b7')
+check('AE12', '003d','002b','00d7','00f7')
 check('AE06', '0036','005e@','00ac','215d')
 check('AD11', '0060@','007e@','005b','007b')
 check('AD12', '02d8@','0326@','005d','007d')
-check('AB08', '002c','003b','2022','00d7')
+check('AB08', '002c','003b','003c','2022')
 check('AD09', '006f','004f','0153','0152')
 check('AC01', '0061','0041','00e6','00c6')
 check('AC10', '00f1','00d1','007e@','02dd@')
@@ -50,6 +51,7 @@ for line in lines:
             assert base not in tables[current], (current, base)
             tables[current][base] = result
 for prefix, base, result in [
+    ('0060','0020','0027'),('0060','0060','0060'),
     ('0060','0063','00e7'),('0060','0043','00c7'),
     ('0060','0073','00df'),('0060','0053','1e9e'),
     ('0326','0073','0219'),('0326','0053','0218'),

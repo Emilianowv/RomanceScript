@@ -4,9 +4,8 @@ Distribución de teclado QWERTY para escribir en **español, portugués, francé
 
 ## Descargas
 
-- **[Linux Debian/Ubuntu: paquete .deb](https://github.com/Emilianowv/RomanceScript/releases/latest/download/romancescript_8.0.0_all.deb)**
-- **[Windows: ZIP con el archivo de diseño KLC](https://github.com/Emilianowv/RomanceScript/releases/latest/download/RomanceScript-8.0.0-Windows.zip)**. No contiene un instalador compilado.
-- [Código fuente ZIP](https://github.com/Emilianowv/RomanceScript/releases/latest/download/RomanceScript-8.0.0.zip), [TAR.GZ](https://github.com/Emilianowv/RomanceScript/releases/latest/download/RomanceScript-8.0.0.tar.gz) y [SHA256SUMS](https://github.com/Emilianowv/RomanceScript/releases/latest/download/SHA256SUMS).
+- **[Linux (.deb)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/romancescript_8.1.0_all.deb)**
+- **[Windows (.zip con diseño KLC)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.0/RomanceScript-8.1.0-Windows.zip)**. Requiere compilar con Microsoft Keyboard Layout Creator.
 
 La abreviatura y el identificador XKB son **rom**. Al actualizar desde wst, instala el paquete y ejecuta `romancescript user-install` y `romancescript kde-select` desde cada cuenta KDE. Después cierra sesión y vuelve a entrar.
 
@@ -24,16 +23,19 @@ La **ñ/Ñ** está en su posición española. **Mayús+coma** escribe **;** y **
 | Tecla junto a la barra inversa, después a/A | ă / Ă |
 | Mayús+esa tecla, después s/S o t/T | ș / Ș / ț / Ț |
 | AltGr+O / AltGr+A | œ / æ; con Mayús, Œ / Æ |
-| AltGr+punto | · |
+| Grave, después Espacio | `'`, como en `cos'è` |
+| AltGr+coma / AltGr+punto | `<` / `>` |
+| Mayús+AltGr+coma / Mayús+AltGr+punto | • / · |
+| AltGr+= / Mayús+AltGr+= | × / ÷ |
 
 El agudo y la diéresis se conservan a la derecha de Ñ. Para formar una letra acentuada, pulsa el acento, suéltalo y pulsa la letra. La [guía de teclas](docs/TECLAS.md) describe las posiciones y las mayúsculas.
 
 ## Sistemas
 
 - **Linux:** instalación XKB, reglas Compose para los acentos y selección desde KDE. Se prueba en Debian 13 con KDE Plasma 6, KWin Wayland y un servidor X11 independiente. Incluye copias de seguridad, actualización y desinstalación.
-- **Windows:** se incluye [RomanceScript.klc](windows/RomanceScript.klc) y un asistente [install.ps1](windows/install.ps1) para descargarlo y abrirlo en Microsoft Keyboard Layout Creator. Tienen controles estáticos; **no se han compilado ni probado en Windows y no hay un instalador Windows compilado**.
+- **Windows:** el ZIP contiene el diseño KLC para Microsoft Keyboard Layout Creator. Se ha comprobado el diseño estáticamente.
 
-[Descargar el código en ZIP](https://github.com/Emilianowv/RomanceScript/archive/refs/heads/main.zip) · [Instalar en Linux con un comando](docs/INSTALACION.md) · [Archivo Windows](windows/README.md)
+[Instalar en Linux](docs/INSTALACION.md) · [Guía de Windows](windows/README.md)
 
 ## Alcance y comprobaciones
 
@@ -49,4 +51,4 @@ make build
 python3 scripts/test_deb.py
 ```
 
-El build genera archivos ZIP y TAR.GZ, un paquete Debian y sus sumas de comprobación. Los detalles de instalación están en [Integración Linux](docs/LINUX.md); los de distribución, en [Publicación](docs/PUBBLICAZIONE.md). Los derechos y la procedencia se describen en [COPYRIGHT](COPYRIGHT) y [Procedencia](docs/PROVENIENZA.md).
+El build genera el paquete Debian y el ZIP de Windows. Los detalles de instalación están en [Integración Linux](docs/LINUX.md); los de distribución, en [Publicación](docs/PUBBLICAZIONE.md). Los derechos y la procedencia se describen en [COPYRIGHT](COPYRIGHT) y [Procedencia](docs/PROVENIENZA.md).

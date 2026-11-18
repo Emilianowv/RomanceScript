@@ -36,8 +36,9 @@ def verify_states(keymap, compose):
             (('AD12',True),('AD05',),'ț'), (('AD12',True),('AD05',True),'Ț'),
             (('AD12',),('AC01',),'ă'), (('AD12',),('AC01',True),'Ă')]:
             assert kb.sequence([first,second]) == expected, expected
-        for first, expected in [(('AD11',),'`'),(('AD11',True),'~')]:
+        for first, expected in [(('AD11',),"'"),(('AD11',True),'~')]:
             assert kb.sequence([first,('SPCE',)]) == expected, expected
+        assert kb.sequence([('AD11',),('AD11',)]) == '`'
     finally:
         kb.close()
 
