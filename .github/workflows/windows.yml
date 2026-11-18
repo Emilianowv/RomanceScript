@@ -1,0 +1,24 @@
+name: Verify Windows installer
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [test/windows-installer]
+
+permissions:
+  contents: read
+
+jobs:
+  installer:
+    runs-on: windows-2022
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/check_windows_klc.py
+      - run: ./windows/build-installer.ps1
+      - run: ./windows/test-installer.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: dist/RomanceScript-*-Windows-x64.exe
+          if-no-files-found: error
