@@ -1,4 +1,4 @@
-# Cobertura de RomanceScript
+# Cobertura linguística de RomanceScript
 
 RomanceScript 8.1.1 · datos Unicode CLDR release-49 · Compose en_US.UTF-8.
 
@@ -19,9 +19,9 @@ Los repertorios principales, auxiliares y de puntuación se mantienen separados.
 | Catalán | · À Ç È É Í Ï Ò Ó Ú Ü à ç è é í ï ò ó ú ü | — |
 | Rumano | Â Î â î Ă ă Ș ș Ț ț | — |
 
-## Rutas actuales de interés
+## Séquences de teclas
 
-| Carácter | Cómo se obtiene |
+| Caractère | Cómo se escribe |
 |---|---|
 | ñ | Ñ |
 | Ñ | Shift+Ñ |
@@ -69,7 +69,7 @@ Los repertorios principales, auxiliares y de puntuación se mantienen separados.
 | ¿ | ¿ |
 | ¡ | Shift+¿ |
 
-## Auxiliares y puntuación
+## Caracteres auxiliares y ponctuation
 
 Estos huecos se muestran aparte: incluyen grafías extranjeras, históricas y tipografía que no forman el alfabeto principal.
 
@@ -85,7 +85,7 @@ Estos huecos se muestran aparte: incluyen grafías extranjeras, históricas y ti
 ## Datos pendientes
 
 
-## Fuentes y reproducción
+## Sources y reproducción
 
 - [CLDR: definición de repertorios principales y auxiliares](https://cldr.unicode.org/translation/core-data/exemplars).
 - [Datos CLDR 49](https://github.com/unicode-org/cldr/tree/release-49/common/main). Cada lengua del JSON conserva el URL y SHA256 de su fuente.

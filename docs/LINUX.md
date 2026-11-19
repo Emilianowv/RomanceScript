@@ -1,10 +1,10 @@
-# Integración Linux
+# Intégration Linux
 
 [Instalación](INSTALACION.md) · [Teclas](TECLAS.md) · [Pruebas](VERIFICA.md)
 
 RomanceScript utiliza XKB y Compose. `system-install` compila la distribución antes de instalarla. `user-install` prepara los acentos de cada usuario y `kde-select` la coloca primero en KDE, conservando las alternativas existentes.
 
-## Archivos e identificadores
+## Fichiers e identificadores
 
 | Ruta | Contenido |
 |---|---|
@@ -19,7 +19,7 @@ El identificador XKB es `rom`, el paquete Debian se llama `romancescript` y el c
 
 El paquete instala el comando `romancescript` y sus datos en `/usr/share/romancescript`. Sus scripts de instalación y retirada gestionan los archivos XKB mediante el mismo mecanismo de respaldo. No se modifican los catálogos de `/usr/share/X11/xkb/rules`.
 
-## Acentos
+## Accenti y Compose
 
 Las reglas personales incluyen grave+c → ç, grave+s → ß y coma inferior+s/t → ș/ț, con sus mayúsculas. El breve para ă y los acentos de las vocales utilizan las tablas estándar.
 
@@ -35,7 +35,7 @@ Los archivos personales `symbols/rom` o `rules/evdev` pueden ocultar la versión
 
 Hace falta cerrar sesión y volver a entrar para cargar los cambios en el escritorio y las aplicaciones. `setxkbmap` permite una prueba temporal en X11; no configura KWin Wayland. Otros escritorios pueden no mostrar la entrada del catálogo. No se cambia SDDM, la consola de texto ni initramfs.
 
-## Respaldos y retirada
+## Salvaguarda y disinstallazione
 
 Antes de cada modificación efectiva se guarda el contenido anterior, los permisos y la ausencia original de los archivos. Las operaciones repetidas no duplican entradas. Los respaldos tienen permisos privados y no deben publicarse.
 

@@ -1,4 +1,4 @@
-# Publicación
+# Publication
 
 Repositorio: [Emilianowv/RomanceScript](https://github.com/Emilianowv/RomanceScript).
 

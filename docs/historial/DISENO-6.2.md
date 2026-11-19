@@ -1,4 +1,4 @@
-# Reparto aprobado de Occidentale 6.2
+# Disegno de Occidentale 6.2
 
 La versión 6.2 conserva el [reparto de acentos de la 6.1](DISENO-6.1.md) y facilita el acceso a los signos de apertura y al carón.
 

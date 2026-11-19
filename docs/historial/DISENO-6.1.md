@@ -1,4 +1,4 @@
-# Reparto aprobado de Occidentale 6.1
+# Disegno de Occidentale 6.1
 
 Documento histórico: la [versión 6.2](DISENO-6.2.md) cambia la tecla debajo de Escape y Mayús+punto.
 

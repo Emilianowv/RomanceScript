@@ -1,54 +1,55 @@
 # RomanceScript
 
-Distribución de teclado QWERTY para escribir en **español, portugués, francés, italiano, rumano y catalán**. Conserva **ß/ẞ** como compatibilidad adicional con el alemán.
+RomanceScript es un **teclado QWERTY** para escribir en español, português, français, italiano, română i català. La même tastiera reúne acentos, ligaduras y signos de las seis lenguas. También incluye ß y ẞ para el alemán.
 
-## Descargas
+## Descargar · télécharger · scaricare
 
-- **[Linux (.deb)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb)**
-- **[Windows x64 (.exe)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/RomanceScript-8.1.1-Windows-x64.exe)**.
+- [Linux (.deb)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb)
+- [Windows x64 (.exe)](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/RomanceScript-8.1.1-Windows-x64.exe)
 
-La abreviatura y el identificador XKB son **rom**. Al actualizar desde wst, instala el paquete y ejecuta `romancescript user-install` y `romancescript kde-select` desde cada cuenta KDE. Después cierra sesión y vuelve a entrar.
+## Seis lenguas, un teclado
 
-## Distribución
-
-La **ñ/Ñ** está en su posición española. **Mayús+coma** escribe **;** y **Mayús+punto** escribe **:**.
-
-| Tecla o combinación | Resultado |
+| Lingua | Exemple |
 |---|---|
-| Debajo de Escape, sin/con Mayús | ¿ / ¡ |
-| Grave, después c/C | ç / Ç |
-| Grave, después s/S | ß / ẞ |
-| Mayús+grave, después a/o | ã / õ |
-| Mayús+6, después vocal | â ê î ô û |
-| Tecla junto a la barra inversa, después a/A | ă / Ă |
-| Mayús+esa tecla, después s/S o t/T | ș / Ș / ț / Ț |
-| AltGr+O / AltGr+A | œ / æ; con Mayús, Œ / Æ |
-| Grave, después Espacio | `'`, como en `cos'è` |
+| Español | ¿Mañana habrá música en la plaza? ¡Sí! |
+| Português | A manhã começou com pão, café e uma canção. |
+| Français | À Noël, le cœur de Lucie était plein de joie. |
+| Italiano | Cos'è? È un caffè, ma non è per me. |
+| Română | Ștefan își cumpără pâine și înghețată. |
+| Català | La col·laboració va començar a la plaça. |
+
+## Teclas · touches · tasti
+
+Con una tecla de acento, pulsa el acento, suelta y escribe la letra. **AltGr** es el Alt de la derecha. **Shift** es la tecla de mayúsculas.
+
+| Combinaison | Resultato |
+|---|---|
+| Tecla a la derecha de L | ñ / Ñ |
+| Tecla debajo de Escape | ¿ / ¡ |
+| Grave, después espacio | `'`, como en `cos'è` |
+| Grave, después c/C o s/S | ç / Ç o ß / ẞ |
+| Shift+grave, después a/o | ã / õ |
+| Shift+6, después una vocal | â ê î ô û |
+| Tecla del breve, después a/A | ă / Ă |
+| Shift+tecla del breve, después s/S o t/T | ș / Ș o ț / Ț |
+| AltGr+O / AltGr+A | œ / æ. Con Shift, Œ / Æ |
 | AltGr+coma / AltGr+punto | `<` / `>` |
-| Mayús+AltGr+coma / Mayús+AltGr+punto | • / · |
-| AltGr+= / Mayús+AltGr+= | × / ÷ |
+| Shift+AltGr+coma / Shift+AltGr+punto | • / · |
+| AltGr+= / Shift+AltGr+= | × / ÷ |
 
-El agudo y la diéresis se conservan a la derecha de Ñ. Para formar una letra acentuada, pulsa el acento, suéltalo y pulsa la letra. La [guía de teclas](docs/TECLAS.md) describe las posiciones y las mayúsculas.
+## Installazione y verifica
 
-## Sistemas
+- **Linux.** Paquete Debian, XKB y Compose. Probado en Debian 13 con KDE Plasma 6, Wayland y X11 mediante Xwayland. El identificador XKB es `rom`. [Guía Linux](docs/INSTALACION.md).
+- **Windows.** Instalador para Intel y AMD de 64 bits. Añade RomanceScript en las opciones de teclado y selecciónalo con **Windows+espacio**. [Guía Windows](windows/README.md).
 
-- **Linux:** instalación XKB, reglas Compose para los acentos y selección desde KDE. Se prueba en Debian 13 con KDE Plasma 6, KWin Wayland y un servidor X11 independiente. Incluye copias de seguridad, actualización y desinstalación.
-- **Windows:** instalador precompilado para equipos Intel y AMD de 64 bits. Después de instalar, añade RomanceScript desde las opciones de teclado de Windows.
+La verifica de Linux cubre las letras principales de las seis lenguas, con mayúsculas. Los signos auxiliares y la puntuación se cuentan por separado. [Cobertura](docs/LENGUAS.md) · [Pruebas](docs/VERIFICA.md).
 
-[Instalar en Linux](docs/INSTALACION.md) · [Guía de Windows](windows/README.md)
+## Développement
 
-## Alcance y comprobaciones
-
-Las pruebas del motor Linux cubren las letras principales de los seis idiomas indicados, incluidas sus mayúsculas. Esto no implica cobertura de todos los signos tipográficos ni pruebas de escritura en todas las aplicaciones. Los caracteres que faltan se indican en el [informe de idiomas](docs/LENGUAS.md).
-
-[Pruebas y límites](docs/VERIFICA.md) · [Diseño](docs/DISENO.md) · [Cambios](docs/CHANGELOG.md) · [Problemas y propuestas](https://github.com/Emilianowv/RomanceScript/issues)
-
-## Desarrollo
-
-```bash
+```sh
 make check
 make build
 python3 scripts/test_deb.py
 ```
 
-En Linux, el build genera el paquete Debian. El instalador Windows se genera en Windows mediante el flujo de GitHub Actions. Los detalles de instalación están en [Integración Linux](docs/LINUX.md); los de distribución, en [Publicación](docs/PUBBLICAZIONE.md). Los derechos y la procedencia se describen en [COPYRIGHT](COPYRIGHT) y [Procedencia](docs/PROVENIENZA.md).
+[Mapa de teclas](docs/TECLAS.md) · [Disegno](docs/DISENO.md) · [Notas de versión](docs/CHANGELOG.md) · [Publication](docs/PUBBLICAZIONE.md) · [Procedencia y derechos](docs/PROVENIENZA.md) · [Incidencias](https://github.com/Emilianowv/RomanceScript/issues)

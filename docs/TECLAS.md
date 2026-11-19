@@ -1,10 +1,10 @@
-# Teclas de RomanceScript
+# Teclas · touches · tasti
 
 [Inicio](../README.md) · [Instalación Linux](INSTALACION.md)
 
 Las posiciones corresponden a RomanceScript; las etiquetas impresas en el teclado pueden ser distintas.
 
-| Posición | Sin Mayús | Con Mayús |
+| Position | Sin Shift | Con Shift |
 |---|---|---|
 | Debajo de Escape | ¿ | ¡ |
 | A la derecha de L | ñ | Ñ |
@@ -17,7 +17,7 @@ Las posiciones corresponden a RomanceScript; las etiquetas impresas en el teclad
 
 Pulsa el acento, suelta y pulsa la letra. Mantén Mayús al pulsar la letra para obtener la mayúscula.
 
-| Secuencia | Resultado |
+| Séquence | Resultado |
 |---|---|
 | Agudo + vocal | á é í ó ú / Á É Í Ó Ú |
 | Grave + Espacio | `'`, como en `cos'è` |
@@ -34,7 +34,7 @@ Pulsa el acento, suelta y pulsa la letra. Mantén Mayús al pulsar la letra para
 
 El acento agudo ya no activa ș/ț. La coma inferior de estas letras se distingue del punto inferior y de la cedilla.
 
-| Combinación simultánea | Resultado |
+| Combinaison simultánea | Resultado |
 |---|---|
 | AltGr+O, sin/con Mayús | œ / Œ |
 | AltGr+A, sin/con Mayús | æ / Æ |

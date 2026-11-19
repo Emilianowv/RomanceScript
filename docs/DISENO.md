@@ -1,4 +1,4 @@
-# Diseño de RomanceScript 8.0
+# Disegno de RomanceScript 8.0
 
 El alcance prioritario es español, portugués, francés, italiano, rumano y catalán. Se conserva ß/ẞ como compatibilidad adicional con el alemán. Otros caracteres heredados pueden seguir disponibles, pero no se declara cobertura de sus lenguas.
 

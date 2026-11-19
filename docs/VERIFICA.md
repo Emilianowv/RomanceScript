@@ -1,8 +1,8 @@
-# Pruebas de RomanceScript
+# Verifica de RomanceScript
 
 Las comprobaciones usan el motor real libxkbcommon y las tablas Compose de Linux. El entorno de referencia es Debian 13 con KDE Plasma 6. Las pruebas no instalan el teclado en el escritorio abierto.
 
-## Qué se comprueba
+## Qué se verifica
 
 - Las 49 posiciones en cuatro niveles: 196 estados contra el manifiesto.
 - ñ/Ñ, ;/:, ¿/¡ y los niveles AltGr conservados.
@@ -15,7 +15,7 @@ Las comprobaciones usan el motor real libxkbcommon y las tablas Compose de Linux
 - Instalación, reinstalación y retirada del paquete con dpkg en una raíz temporal. El workflow Debian añade un ciclo en un contenedor desechable.
 - En Windows Server 2022 x64, los controles estáticos del KLC, la compilación, la instalación, la reinstalación, las teclas mediante la API Win32 y la desinstalación.
 
-## Reproducir las pruebas
+## Reproducir los tests
 
 ```bash
 sudo apt install make python3 libxkbcommon-tools xkb-data x11-xkb-utils dpkg-dev fakeroot
@@ -35,7 +35,7 @@ python3 scripts/test_kwin.py
 
 Estos tests necesitan sockets e IPC que algunos entornos aislados bloquean. Los procesos y los archivos temporales se retiran al terminar.
 
-## Límites
+## Limiti
 
 No se ha abierto una sesión completa Plasma Xorg para estas pruebas: X11 se comprueba mediante un servidor Xwayland independiente. El catálogo se comprueba con libxkbregistry; esto no equivale a completar una selección manual en cada interfaz de escritorio.
 

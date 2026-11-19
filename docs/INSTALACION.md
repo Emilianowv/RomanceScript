@@ -1,10 +1,10 @@
-# Instalar RomanceScript en Linux
+# Installazione de RomanceScript en Linux
 
 [← Inicio](../README.md) · [Guía de teclas](TECLAS.md) · [¿Buscas Windows?](../windows/README.md)
 
 La instalación está verificada en **Debian 13 con KDE Plasma 6**. Incluye el teclado, las combinaciones de acentos y una copia de tu configuración anterior.
 
-## Instalar con el paquete Debian
+## Installer con el paquete Debian
 
 Descarga [RomanceScript para Linux](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb) y, desde la carpeta de descarga, ejecuta estos comandos.
 
@@ -17,13 +17,13 @@ romancescript doctor
 
 Ejecuta los tres comandos `romancescript` desde cada cuenta KDE que utilice el teclado. Guarda el trabajo, cierra sesión y vuelve a entrar.
 
-## Instalación desde el código fuente
+## Installation desde el código fuente
 
-## 1. Descarga y abre la carpeta
+## 1. Descargar y abrir la cartella
 
 [Descarga el ZIP del proyecto](https://github.com/Emilianowv/RomanceScript/archive/refs/heads/main.zip), extráelo y abre una terminal dentro de la carpeta **RomanceScript-main**. En muchos gestores de archivos puedes hacerlo con clic derecho → «Abrir terminal aquí».
 
-## 2. Instala el teclado
+## 2. Instalar el teclado
 
 En Debian 13, copia estos comandos en la terminal, uno tras otro:
 
@@ -40,7 +40,7 @@ La contraseña que puede pedir `sudo` es la de tu equipo. Al escribirla en la te
 
 **Conserva la carpeta:** la necesitarás para actualizar, consultar las copias o desinstalar si utilizas este método.
 
-## 3. Selecciónalo en KDE Plasma
+## 3. Selezione en KDE Plasma
 
 ```bash
 ./romancescript kde-select
@@ -55,12 +55,12 @@ También puedes abrir **Preferencias del sistema → Teclado → Distribuciones*
 
 **Guarda tu trabajo, cierra sesión y vuelve a entrar.** Así el escritorio y las aplicaciones cargan el teclado y sus acentos. No hace falta reiniciar el equipo.
 
-## 4. Prueba tus primeras palabras
+## 4. Prova de escritura
 
 Abre tu editor habitual y prueba:
 
 ```text
-español · português · français · italiano · română · català
+¿Mañana? · pão e café · cœur de Noël · cos'è? · înghețată · col·laboració
 ñ Ñ · ç Ç · œ Œ · æ Æ · ă Ă · ș Ș · ț Ț · ß ẞ
 ```
 
@@ -78,7 +78,7 @@ setxkbmap rom
 
 Antes de probar, anota el identificador de tu distribución habitual para poder volver a ella. Este comando no configura la selección persistente del escritorio ni funciona como selector de Wayland. En **Wayland** la selección depende del escritorio: estas instrucciones automatizan KDE. No se modifican la consola de texto ni la pantalla de inicio de sesión.
 
-## Actualizar
+## Actualizar · aggiornare
 
 Con el ZIP: descarga la nueva versión, extráela en una carpeta aparte y repite `system-install` con sudo y `user-install` sin sudo desde esa carpeta. Conserva la nueva carpeta para gestionar esa instalación.
 
@@ -90,7 +90,7 @@ El paquete antiguo `occidentale`, si está instalado, puede permanecer durante l
 
 Después cierra sesión y vuelve a entrar. Repetir estos pasos no duplica las entradas y las modificaciones efectivas generan copias de seguridad.
 
-## Volver atrás
+## Restaurar la configuration
 
 Si instalaste desde el ZIP, abre una terminal en su carpeta:
 
@@ -110,7 +110,7 @@ sudo ./romancescript restore --scope system
 
 Con el paquete `.deb`, utiliza los mismos comandos sin `./`.
 
-## Desinstalar
+## Disinstallazione
 
 Desde la carpeta del ZIP, cada usuario que lo utiliza ejecuta:
 
@@ -128,7 +128,7 @@ Con el paquete `.deb`, usa `romancescript user-remove`, cambia de teclado y vuel
 
 Las copias de seguridad se conservan. Los cambios ajenos a RomanceScript se respetan; si hay un conflicto, el programa lo indica antes de sobrescribirlos.
 
-## Si algo no funciona
+## Ajuda y diagnostics
 
 - **No aparece en KDE:** cierra y vuelve a abrir Preferencias del sistema; comprueba el filtro de idioma y ejecuta `doctor`.
 - **Aparece, pero siguen las teclas anteriores:** guarda tu trabajo, cierra sesión y vuelve a entrar.

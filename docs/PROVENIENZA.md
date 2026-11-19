@@ -1,4 +1,4 @@
-# Procedencia
+# Provenienza
 
 RomanceScript continúa el proyecto llamado Occidentale. La base recibida fue `Europeo-Keyboard-repository(1).zip`, con SHA256 `b7df76e307ce35307f2781cfe5dc975e2aa65b1b40b00909a02cd67025a1960c`.
 

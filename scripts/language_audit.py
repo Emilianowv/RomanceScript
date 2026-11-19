@@ -107,7 +107,7 @@ def report(kb, data, manifest):
 
 
 def markdown(result):
-    lines=['# Cobertura de RomanceScript', '',
+    lines=['# Cobertura linguística de RomanceScript', '',
            f"RomanceScript {result['layout_version']} · datos Unicode CLDR {result['source']} · Compose en_US.UTF-8.", '',
            'El alcance prioritario es español, portugués, francés, italiano, rumano y catalán. Se conserva ß/ẞ como compatibilidad adicional.', '',
            'Se han probado teclas directas, Shift/AltGr y un acento muerto seguido de una tecla imprimible. Las mayúsculas también se comprueban. Los dígrafos se evalúan como cadenas. “Falta” significa que no apareció en esas rutas; puede existir otra vía con varios acentos, entrada Unicode o una tecla Compose configurada aparte.', '',
@@ -119,11 +119,11 @@ def markdown(result):
             if row['group']==group:
                 lines.append(f"| {row['name']} | {' '.join(row['special']) or 'Ninguno fuera de ASCII'} | {' '.join(row['missing']) or '—'} |")
         lines.append('')
-    lines += ['## Rutas actuales de interés', '', '| Carácter | Cómo se obtiene |', '|---|---|']
+    lines += ['## Séquences de teclas', '', '| Caractère | Cómo se escribe |', '|---|---|']
     for char in 'ñÑçÇßẞăĂșȘțȚœŒæÆãÃõÕàèìòùáéíóúâêîôûäëïöüÿŸ·¿¡':
         recipe=result['recipes'].get(char)
         lines.append(f"| {char} | {' → '.join(recipe['steps']) if recipe else 'No encontrado'} |")
-    lines += ['', '## Auxiliares y puntuación', '',
+    lines += ['', '## Caracteres auxiliares y ponctuation', '',
               'Estos huecos se muestran aparte: incluyen grafías extranjeras, históricas y tipografía que no forman el alfabeto principal.', '',
               '| Lengua | Auxiliares ausentes | Puntuación ausente |', '|---|---|---|']
     for row in result['languages']:
@@ -133,7 +133,7 @@ def markdown(result):
     lines += ['', '## Datos pendientes', '']
     for row in result.get('unavailable_languages',[]):
         lines.append(f"- {row['name']}: {row['unavailable']}")
-    lines += ['', '## Fuentes y reproducción', '',
+    lines += ['', '## Sources y reproducción', '',
               '- [CLDR: definición de repertorios principales y auxiliares](https://cldr.unicode.org/translation/core-data/exemplars).',
               '- [Datos CLDR 49](https://github.com/unicode-org/cldr/tree/release-49/common/main). Cada lengua del JSON conserva el URL y SHA256 de su fuente.',
               '- `python3 scripts/language_audit.py --write` regenera este informe usando XKB y Compose reales, sin red.',
