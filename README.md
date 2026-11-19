@@ -1,33 +1,48 @@
 # RomanceScript
 
-Aquest teclado permette escrever în seis langues: català, português, français, italiano, română i español. Écris anche aici «mañana», «pão», «cœur», «caffè», «col·laboració» ou «înghețată».
+**Une tastiera QWERTY para escrever în català, español, français, italiano, português i română.**
 
-| Linux | Windows x64 |
-|---|---|
-| [.deb](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb) | [.exe](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/RomanceScript-8.1.1-Windows-x64.exe) |
+Aquest layout permette écrire amb acentos, ligatures e caràcters especiais senza cambiar configurazione.
 
-## Linux · Debian 13 · KDE Plasma 6
+> `¿Mañana? · pão · cœur · caffè · col·laboració · înghețată`
 
-```sh
+---
+
+## Descargar · Instalar · Télécharger
+
+- **[Linux · Paquete `.deb`](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/romancescript_8.1.1_all.deb)** (Debian / Ubuntu / KDE)
+- **[Windows x64 · Instalador `.exe`](https://github.com/Emilianowv/RomanceScript/releases/download/v8.1.1/RomanceScript-8.1.1-Windows-x64.exe)**
+
+### Linux
+
+Instalează el paquete `.deb` e executa aceste comandos en terminal:
+
+```bash
 romancescript user-install
 romancescript kde-select
 ```
 
-## Tecles · teclas · touches · tasti · teclas · taste
+Închide la session i conectează-te novamente per applicare el layout.
 
-| ⌨ | → |
-|---|---|
-| `` ` `` → Space | `'` · `cos'è` |
-| `` ` `` → C / S | ç / ß |
-| AltGr+O / AltGr+A | œ / æ |
-| ˘ → A | ă |
-| Shift+˘ → S / T | ș / ț |
-| AltGr+, / AltGr+. | `<` / `>` |
-| Shift+AltGr+, / Shift+AltGr+. | • / · |
-| AltGr+= / Shift+AltGr+= | × / ÷ |
+### Windows
 
-## Documentació · Documentación · Documentation · Documentazione · Documentação · Documentație
+Executa el instalador `.exe`, aggiungi **RomanceScript** în opțiunile del clavier e selecione com `Win` + `Space`.
 
-[Linux](docs/INSTALACION.md) · [Windows](windows/README.md) · [Mapa de teclas](docs/TECLAS.md) · [Cobertura](docs/LENGUAS.md) · [Pruebas](docs/VERIFICA.md) · [Cambios](docs/CHANGELOG.md) · [Procedencia y derechos](docs/PROVENIENZA.md)
+## Teclas i combinaisons
 
-[Issues](https://github.com/Emilianowv/RomanceScript/issues) · [Releases](https://github.com/Emilianowv/RomanceScript/releases)
+> **Mode d'emploi:** Premi la tecla morta (dead key), solte, puis escribe la letra.
+
+| **Tecla / Combinación** | **Resultat** | **Exemple** |
+| --- | --- | --- |
+| `` ` `` (Grave) → `Space` | `'` | `cos'è`, `l'amour` |
+| `` ` `` (Grave) → `c` / `s` | `ç` / `ß` | `ça va`, `coração`, `straße` |
+| `AltGr` + `o` / `a` | `œ` / `æ` | `cœur`, `æther` |
+| `˘` (Breve) → `a` | `ă` | `înghețată` |
+| `⇧ Shift` + `˘` (Breve) → `s` / `t` | `ș` / `ț` | `și`, `țară` |
+| `AltGr` + `,` / `.` | `<` / `>` | `a < b > c` |
+
+## Documentação
+
+- [Guía de teclas](docs/TECLAS.md)
+- [Ajuda Linux](docs/INSTALACION.md)
+- [Guida Windows](windows/README.md)
